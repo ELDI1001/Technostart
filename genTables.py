@@ -13,7 +13,7 @@ try:
     #MAKE SURE THIS IS TRUE; IF NOT THEN IT WONT INSERT INTO TABLES
     connection.autocommit = True
 except mariadb.Error as e:
-    print("Could not connect to mariadb. Error msg: {e}")
+    print(f"Could not connect to mariadb. Error msg: {e}")
     sys.exit(1)
     
 #Set cursor
