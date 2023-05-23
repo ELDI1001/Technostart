@@ -88,7 +88,7 @@ Note that domain is the same as the server name. A directory with the same name 
 
 Now, delete the directory by doing
 ```
-sudo rm -r var/www/[domain]
+sudo rm -r /var/www/[domain]
 ```
 
 ### Clone repository
