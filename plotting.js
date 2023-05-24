@@ -46,7 +46,7 @@ function StartPlot(file, sql, parameter) {
 				return;			
 			}		
 			array_data = JSON.parse(this.responseText).reverse();
-			Plotting(parameter, array_data, 'scatter', '#B0E0E6');
+			Plotting(parameter, array_data, 'scatter', '#FFFFFF');
 		}
 	}
 	Req.open("GET", file+"?q="+sql, true);
