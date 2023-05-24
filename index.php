@@ -24,13 +24,18 @@ session_start();
 
 	<style type="text/css">
 	
-	#myVideo {
-		  position: fixed;
-		  right: 0;
-		  bottom: 0;
-		  min-width: 100%;
-		  min-height: 100%;
-		  z-index: -1
+	.video-container{
+		width: 100vw;
+		height: 100vh;
+	}
+	
+	iframe {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 10ovw;
+		height: 100vh;
+		transform: translate(-50%, -50%);
 	}
 	
 	
@@ -61,16 +66,31 @@ session_start();
 	
 		margin: auto;
 		width: 90%;
-		padding: 50px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 		
+	@media (min-aspect-ratio: 16/9) {
+		.video-container iframe {
+			height: 56.25vw;
+		}
 	}
 	
+	@media (max-aspect-ratio: 16/9) {
+		.video-container iframe {
+			width: 177.78vh;
+		}
+	}
+		
 	</style>
 	
-	<div>
-		<video autoplay muted loop id="myVideo">
-			<source src="Elektrifisering og digitalisering _ NTNU.mp4" type="video/mp4">
-		</video>
+	<div class="video-container">
+		<iframe width=100% height=100%
+			src="https://www.youtube.com/watch?v=NxuJWImTKTY?controls=0&autoplay=1&showinfo=0&mute=1&playsinline=1&loop=1" frameborder = 0
+			allowfullscreen>
+		</iframe>
 	</div>
 	
 	<div id="box">
